@@ -41,21 +41,21 @@ ${cardsDescription}
 ## 解读要求：
 请你给出包含以下三部分的专业解读，每部分都要严格遵守字数限制：
 
-1. **结论**（20字以内）：用一句话概括整体解读
-2. **分析**（100字以内）：详细解析牌阵的含义和关联
-3. **建议**（50字以内）：给出具体可行的建议
+1. **结论**（100字以内）：概括整体解读和核心指引
+2. **分析**（500字以内）：详细深度解析牌阵的含义、关联、牌面元素及深层启示
+3. **建议**（500字以内）：给出详尽、具体、可行的行动建议和心理指导
 
 **注意：**
-- 必须严格控制在字数限制内
+- 必须严格控制在字数限制内，但内容要充实
 - 分析要结合牌阵、牌面元素、关键词进行综合解读
 - 语言要通俗易懂，避免过于专业的术语
 - 建议要具体可行，具有实际指导意义
 
 请严格按照以下JSON格式输出，不要包含其他内容：
 {
-  "conclusion": "你的结论，控制在20字以内",
-  "analysis": "你的分析，控制在100字以内", 
-  "advice": "你的建议，控制在50字以内"
+  "conclusion": "你的结论，控制在100字以内",
+  "analysis": "你的分析，控制在500字以内", 
+  "advice": "你的建议，控制在500字以内"
 }
 `.trim()
 }
@@ -72,14 +72,14 @@ function parseAIResponse(responseText: string): AIInterpretation {
     }
     
     // 验证字数限制
-    if (result.conclusion.length > 20) {
-      result.conclusion = result.conclusion.substring(0, 20)
+    if (result.conclusion.length > 100) {
+      result.conclusion = result.conclusion.substring(0, 100)
     }
-    if (result.analysis.length > 100) {
-      result.analysis = result.analysis.substring(0, 100)
+    if (result.analysis.length > 500) {
+      result.analysis = result.analysis.substring(0, 500)
     }
-    if (result.advice.length > 50) {
-      result.advice = result.advice.substring(0, 50)
+    if (result.advice.length > 500) {
+      result.advice = result.advice.substring(0, 500)
     }
     
     return {
@@ -131,9 +131,9 @@ function extractInterpretationFromText(text: string): AIInterpretation {
   
   // 应用字数限制
   return {
-    conclusion: conclusion.substring(0, 20),
-    analysis: analysis.substring(0, 100),
-    advice: advice.substring(0, 50)
+    conclusion: conclusion.substring(0, 100),
+    analysis: analysis.substring(0, 500),
+    advice: advice.substring(0, 500)
   }
 }
 
@@ -160,7 +160,7 @@ export async function getAIInterpretation(request: AIRequest): Promise<AIRespons
             content: prompt
           }
         ],
-        max_tokens: 500,
+        max_tokens: 2000,
         temperature: 0.7
       })
     })
