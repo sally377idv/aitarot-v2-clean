@@ -1,18 +1,8 @@
-// JSON文件在运行时加载，使用异步导入
-let tarotCardsData: any = null
+// 直接导入 JSON 数据，确保生产环境可用
+import tarotCardsData from '../data/tarotCards.json'
 
-// 异步加载塔罗牌数据
+// 异步加载塔罗牌数据 (保持异步接口兼容性)
 async function loadTarotCardsData() {
-  if (!tarotCardsData) {
-    try {
-      const response = await fetch('/src/data/tarotCards.json')
-      tarotCardsData = await response.json()
-    } catch (error) {
-      console.error('加载塔罗牌数据失败:', error)
-      // 返回空数据防止应用崩溃
-      tarotCardsData = { majorArcana: [], cups: [], swords: [], wands: [], pentacles: [] }
-    }
-  }
   return tarotCardsData
 }
 
