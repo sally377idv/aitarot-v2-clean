@@ -3,7 +3,6 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { DivinationSession, AIInterpretation } from '../types'
 import { getAIInterpretation } from '../services/aiService'
 import { updateSessionInterpretation, trackPageView, trackButtonClick } from '../services/sessionService'
-import TarotCardDeck from '../components/TarotCardDeck'
 
 interface InterpretationPageProps {
   cachedSession?: DivinationSession | null
@@ -136,14 +135,6 @@ const InterpretationPage: React.FC<InterpretationPageProps> = ({
         <p className="text-gray-600">基于塔罗牌阵的深度分析和建议</p>
       </div>
 
-      {/* 牌阵展示 */}
-      <div className="max-w-4xl mx-auto mb-8">
-        <TarotCardDeck 
-          cardCount={3}
-          autoDraw={true}
-        />
-      </div>
-
       {/* 解读结果 */}
       <div className="max-w-3xl mx-auto">
         {isLoading ? (
@@ -165,9 +156,6 @@ const InterpretationPage: React.FC<InterpretationPageProps> = ({
                 <h3 className="text-xl font-semibold text-purple-800">核心结论</h3>
               </div>
               <p className="text-lg text-purple-900 font-medium">{interpretation.conclusion}</p>
-              <div className="text-right text-sm text-purple-600 mt-2">
-                {interpretation.conclusion.length}/20字
-              </div>
             </div>
 
             {/* 分析部分 */}
@@ -179,9 +167,6 @@ const InterpretationPage: React.FC<InterpretationPageProps> = ({
                 <h3 className="text-xl font-semibold text-blue-800">深度分析</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">{interpretation.analysis}</p>
-              <div className="text-right text-sm text-gray-500 mt-2">
-                {interpretation.analysis.length}/100字
-              </div>
             </div>
 
             {/* 建议部分 */}
@@ -193,9 +178,6 @@ const InterpretationPage: React.FC<InterpretationPageProps> = ({
                 <h3 className="text-xl font-semibold text-green-800">具体建议</h3>
               </div>
               <p className="text-green-900 font-medium">{interpretation.advice}</p>
-              <div className="text-right text-sm text-green-600 mt-2">
-                {interpretation.advice.length}/50字
-              </div>
             </div>
 
             {/* AI配置提示 */}
