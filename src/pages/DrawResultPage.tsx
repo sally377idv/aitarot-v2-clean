@@ -194,5 +194,3 @@ const DrawResultPage: React.FC<DrawResultPageProps> = ({
 }
 
 export default DrawResultPage
-
-export default DrawResultPage
