@@ -1,0 +1,112 @@
+{
+  "majorArcana": [
+    {
+      "id": "fool",
+      "name": "愚者",
+      "keywords": ["开始", "冒险", "自由"],
+      "element": "风",
+      "description": "充满无限可能的新开始",
+      "imageUrl": "/images/fool.jpg",
+      "upright": "新的开始，冒险精神，自由灵魂",
+      "reversed": "鲁莽，不负责任，风险"
+    },
+    {
+      "id": "magician",
+      "name": "魔术师",
+      "keywords": ["创造", "技能", "意志"],
+      "element": "水星",
+      "description": "运用资源和技能实现目标",
+      "imageUrl": "/images/magician.jpg",
+      "upright": "技能，资源，创造力，意志力",
+      "reversed": "欺骗，未使用潜力，操纵"
+    },
+    {
+      "id": "high-priestess",
+      "name": "女祭司",
+      "keywords": ["直觉", "神秘", "内省"],
+      "element": "月亮",
+      "description": "连接潜意识和内在智慧",
+      "imageUrl": "/images/high-priestess.jpg",
+      "upright": "直觉，神秘，潜意识，内在智慧",
+      "reversed": "秘密，隐藏动机，不信任直觉"
+    },
+    {
+      "id": "empress",
+      "name": "皇后",
+      "keywords": ["丰盛", "滋养", "创造"],
+      "element": "金星",
+      "description": "代表丰盛和母性力量",
+      "imageUrl": "/images/empress.jpg",
+      "upright": "丰盛，滋养，富足，创造力",
+      "reversed": "依赖，过度放纵，创造性阻碍"
+    },
+    {
+      "id": "emperor",
+      "name": "皇帝",
+      "keywords": ["权威", "结构", "控制"],
+      "element": "火星",
+      "description": "权威和结构性力量的象征",
+      "imageUrl": "/images/emperor.jpg",
+      "upright": "权威，结构，控制，稳定",
+      "reversed": "控制欲，僵化，滥用权力"
+    }
+  ],
+  "cups": [
+    {
+      "id": "ace-cups",
+      "name": "圣杯首牌",
+      "keywords": ["情感", "新爱", "直觉"],
+      "element": "水",
+      "description": "情感新开始和爱的机会",
+      "imageUrl": "/images/ace-cups.jpg",
+      "upright": "新情感，爱，直觉，灵性",
+      "reversed": "情感空虚，失落，不连接"
+    },
+    {
+      "id": "two-cups",
+      "name": "圣杯二",
+      "keywords": ["伙伴", "和谐", "联合"],
+      "element": "水",
+      "description": "和谐的关系和情感连接",
+      "imageUrl": "/images/two-cups.jpg",
+      "upright": "伙伴关系，和谐，联合，爱",
+      "reversed": "不平衡，冲突，分离"
+    }
+  ],
+  "swords": [
+    {
+      "id": "ace-swords",
+      "name": "宝剑首牌",
+      "keywords": ["突破", "清晰", "真理"],
+      "element": "风",
+      "description": "思想突破和清晰洞察",
+      "imageUrl": "/images/ace-swords.jpg",
+      "upright": "突破，清晰，真理，正义",
+      "reversed": "混乱，破坏，滥用权力"
+    }
+  ],
+  "wands": [
+    {
+      "id": "ace-wands",
+      "name": "权杖首牌",
+      "keywords": ["创造", "灵感", "机会"],
+      "element": "火",
+      "description": "新事业开始和激情驱动",
+      "imageUrl": "/images/ace-wands.jpg",
+      "upright": "创造，灵感，机会，新事业",
+      "reversed": "延迟，失去激情，错过机会"
+    }
+  ],
+  "pentacles": [
+    {
+      "id": "ace-pentacles",
+      "name": "星币首牌",
+      "keywords": ["机会", "繁荣", "物质"],
+      "element": "土",
+      "description": "物质繁荣和新机会到来",
+      "imageUrl": "/images/ace-pentacles.jpg",
+      "upright": "机会，繁荣，物质富足，新开始",
+      "reversed": "错失机会，财务损失，延迟"
+    }
+  ]
+}
